@@ -1,25 +1,24 @@
 package kth.se.LabResultService.service;
 
 import com.eventstore.dbclient.*;
+
 import com.google.gson.*;
 import kth.se.LabResultService.model.LabResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class LabResultService {
 
     private final KafkaTemplate<String, LabResult> kafkaTemplate;
     private final EventStoreDBClient eventStoreDBClient;
-    private static final String STREAM = "LabResult_Stream";
-     private static final Gson gson = new Gson();
+    private static final String STREAM = "LabResultStream";
+     // private static final Gson gson = new Gson();
 
     @Autowired
     public LabResultService(KafkaTemplate<String, LabResult> kafkaTemplate, EventStoreDBClient eventStoreDBClient) {
@@ -33,10 +32,9 @@ public class LabResultService {
 
     public void saveLabResult(LabResult labResult) {
         try {
-            String labResultJson = new Gson().toJson(labResult);
 
             EventData event = EventData
-                    .builderAsJson("LabResult", labResultJson)
+                    .builderAsJson(UUID.randomUUID(), "LabResult", labResult)
                     .build();
 
             WriteResult writeResult = eventStoreDBClient
@@ -49,18 +47,18 @@ public class LabResultService {
         }
     }
 
+
     public List<String> getAllEventsInStream(String streamName) {
         List<String> events = new ArrayList<>();
-
         try {
             ReadStreamOptions options = ReadStreamOptions.get()
                     .forwards()
                     .fromStart();
 
             ReadResult readResult = eventStoreDBClient.readStream(streamName, options).get();
-
             for (ResolvedEvent resolvedEvent : readResult.getEvents()) {
                 String eventData = new String(resolvedEvent.getOriginalEvent().getEventData());
+
                 events.add(eventData);
             }
         } catch (Exception e) {
@@ -69,6 +67,9 @@ public class LabResultService {
 
         return events;
     }
+
+
+
 
 
 
