@@ -7,10 +7,14 @@ import com.eventstore.dbclient.ReadStreamOptions;
 import com.eventstore.dbclient.ResolvedEvent;
 import com.eventstore.dbclient.WriteResult;
 import kth.se.LabResultService.model.LabResult;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.support.TopicPartitionOffset;
 import org.springframework.stereotype.Service;
 import com.google.gson.Gson;
+
 
 
 @Service
@@ -19,8 +23,7 @@ public class LabResultService {
     private final KafkaTemplate<String, LabResult> kafkaTemplate;
     private final EventStoreDBClient eventStoreDBClient;
     private static final String STREAM = "LabResult_Stream";
-    // private static final Gson gson = new Gson();
-
+     private static final Gson gson = new Gson();
 
     @Autowired
     public LabResultService(KafkaTemplate<String, LabResult> kafkaTemplate, EventStoreDBClient eventStoreDBClient) {
@@ -31,6 +34,7 @@ public class LabResultService {
     public void publishLabResult(LabResult labResult) {
         kafkaTemplate.send("lab-result-topic", labResult.getId(), labResult);
     }
+
 
 
     public void saveLabResult(LabResult labResult) {
@@ -54,6 +58,8 @@ public class LabResultService {
         }
     }
 
+
+
     /*
     public List<String> getLabResultsFromStream(String stream) throws Exception {
         List<String> resultList = new ArrayList<>();
@@ -66,6 +72,8 @@ public class LabResultService {
     }
 
      */
+
+
 
 
 }
