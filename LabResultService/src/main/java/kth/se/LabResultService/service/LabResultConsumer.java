@@ -1,4 +1,4 @@
-package kth.se.LabResultService.config;
+package kth.se.LabResultService.service;
 
 
 import com.google.gson.Gson;
@@ -18,6 +18,7 @@ public class LabResultConsumer {
     private LabResultService labResultEventStoreService;
     @Autowired
     private NotificationService notificationService;
+
     @KafkaListener(topics = "lab-result-topic", groupId = "lab-result-group")
     public void consumeLabResult(String labResultJson) {
         try {

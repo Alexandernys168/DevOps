@@ -1,4 +1,4 @@
-package kth.se.LabResultService.config;
+package kth.se.LabResultService.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
 public class NotificationConsumer {
 
     private static final Logger logger = LoggerFactory.getLogger(NotificationConsumer.class);
-
     @KafkaListener(topics = "notification-topic", groupId = "notification-group")
     public void receiveNotification(String message) {
         logger.info("Received notification: {}", message);
     }
+
 
 }

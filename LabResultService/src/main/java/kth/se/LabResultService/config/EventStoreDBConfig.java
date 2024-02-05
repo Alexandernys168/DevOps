@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class EventStoreDBConfiguration {
+public class EventStoreDBConfig {
     @Value("${eventstoredb.connection-string}")
     private String eventStoreDBConnectionString;
 
