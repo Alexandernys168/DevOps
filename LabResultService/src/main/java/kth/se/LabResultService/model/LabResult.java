@@ -7,5 +7,5 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 
-public record LabResult(String id, String patientId,String Result, Long registeredAt ) {}
+public record LabResult(String id, String patientId,String result ) {}
 

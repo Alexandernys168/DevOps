@@ -5,12 +5,14 @@ import com.eventstore.dbclient.ReadResult;
 import com.eventstore.dbclient.ReadStreamOptions;
 import com.eventstore.dbclient.ResolvedEvent;
 import kth.se.LabResultService.model.LabResult;
+import kth.se.LabResultService.model.LabResultEvent;
 import kth.se.LabResultService.repository.EventStoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -32,11 +34,11 @@ public class LabResultService {
     }
 
     public void registerLabResult(LabResult labresult){
-        Long now = new Date().getTime();
-        LabResult event= new LabResult(
+        LocalDateTime now = LocalDateTime.now();
+        LabResultEvent event= new LabResultEvent(
                 labresult.id(),
                 labresult.patientId(),
-                labresult.Result(),
+                labresult.result(),
                 now
         );
         kafkaTemplate.send(LabResultTopic,event);

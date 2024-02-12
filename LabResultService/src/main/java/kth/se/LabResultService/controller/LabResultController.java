@@ -18,7 +18,8 @@ import java.util.List;
 
 public class LabResultController {
 
-
+    @Value("${eventstoredb.stream.name}")
+    private String streamName;
     private final EventStoreRepository eventStoreRepository;
 
     private final LabResultService labResultService;
@@ -47,7 +48,7 @@ public class LabResultController {
     @GetMapping("/allevents")
     public ResponseEntity<List<String>> getAllEvents() {
         try {
-            List<String> allEvents = labResultService.getAllEventsInStream("labResultStream" );
+            List<String> allEvents = labResultService.getAllEventsInStream(streamName);
             return ResponseEntity.ok(allEvents);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);

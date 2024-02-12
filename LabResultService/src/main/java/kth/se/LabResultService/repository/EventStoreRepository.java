@@ -2,6 +2,7 @@ package kth.se.LabResultService.repository;
 
 import com.eventstore.dbclient.*;
 import kth.se.LabResultService.model.LabResult;
+import kth.se.LabResultService.model.LabResultEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
@@ -24,11 +25,10 @@ public class EventStoreRepository {
     }
 
 
-    public void save(LabResult event) throws ExecutionException, InterruptedException {
+    public void save(LabResultEvent event) throws ExecutionException, InterruptedException {
         EventData eventData = EventData.builderAsJson("LabResultEvent", event).build();
         eventStoreDBClient.appendToStream(streamName, eventData).get();
     }
-
 
 
 
