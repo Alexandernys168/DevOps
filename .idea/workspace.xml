@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="86826be4-3e55-410e-9a1a-03def35347c4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/model/LabResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/model/LabResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/model/LabResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/model/LabResultEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/repository/EventStoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/repository/EventStoreRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/service/EventStoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/service/EventStoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/service/LabResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/service/LabResultService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/model/PatientRegisteredEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/model/PatientRegisteredEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/service/EventStoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/service/EventStoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/service/PatientRegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/service/PatientRegistrationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="minikube" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2cGiR374zmgLD2MwlssflvA6Bd7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/KTH_3/SoftwareProjekt/DevOps/LabResultService",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "spring.configuration.checksum": "85613be2d5e72d9467e3ff9666c00339"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.PatientManagementApplication">
+    <configuration name="LabResultServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="LabResultService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="kth.se.LabResultService.LabResultServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="PatientManagement" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="kth.system.healthcare.PatientRegistrationService.PatientManagementApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86826be4-3e55-410e-9a1a-03def35347c4" name="Changes" comment="" />
+      <created>1707744308890</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707744308890</updated>
+      <workItem from="1707744310981" duration="5553000" />
+      <workItem from="1707757185071" duration="41000" />
+      <workItem from="1707757325335" duration="19000" />
+      <workItem from="1707758967597" duration="18000" />
+      <workItem from="1707760923199" duration="15000" />
+      <workItem from="1707760957833" duration="43000" />
+      <workItem from="1707762930361" duration="1199000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

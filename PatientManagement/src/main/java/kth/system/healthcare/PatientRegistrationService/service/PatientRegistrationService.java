@@ -38,8 +38,8 @@ public class PatientRegistrationService {
                 patient.name(),
                 patient.dateOfBirth(),
                 patient.email(),
-                patient.phoneNumber(),
-                now
+                patient.phoneNumber()
+                //now
         );
 
         kafkaTemplate.send(patientRegistrationTopic, event);

@@ -18,4 +18,17 @@ public class EventStoreService {
     public void handlePatientRegisteredEvent(PatientRegisteredEvent event) throws ExecutionException, InterruptedException {
         eventStoreRepository.save(event);
     }
+
+    @KafkaListener(topics = "labResult-topic", groupId = "patient-registration-group")
+    public void handleLabResultEvent(String labResult) {
+        String message = "Nytt labbresultat mottaget: " + labResult;
+        notifyUser(message);
+
+    }
+
+    private void notifyUser(String message) {
+        // Implementera logik för att skicka en notifiering till användaren, t.ex. via e-post, SMS, push-meddelande etc.
+        System.out.println("Notifierar användaren: " + message);
+    }
+
 }
