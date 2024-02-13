@@ -1,4 +1,4 @@
-package kth.se.LabResultService.service;
+package kth.se.DoctorManagementService.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;

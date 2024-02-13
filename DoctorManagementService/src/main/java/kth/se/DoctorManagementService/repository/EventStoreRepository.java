@@ -1,8 +1,8 @@
-package kth.se.LabResultService.repository;
+package kth.se.DoctorManagementService.repository;
 
 import com.eventstore.dbclient.*;
 import com.google.gson.Gson;
-import kth.se.LabResultService.model.LabResult;
+import kth.se.DoctorManagementService.model.Doctor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
@@ -24,7 +24,7 @@ public class EventStoreRepository {
     }
 
 
-    public void save(LabResult event) throws ExecutionException, InterruptedException {
+    public void save(Doctor event) throws ExecutionException, InterruptedException {
         EventData eventData = EventData.builderAsJson("LabResultEvent", event).build();
         eventStoreDBClient.appendToStream(streamName, eventData).get();
     }
@@ -51,19 +51,19 @@ public class EventStoreRepository {
         return events;
     }
 
-    public List<LabResult> getAllLabResults() {
-        List<LabResult> labResults = new ArrayList<>();
+    public List<Doctor> getAllLabResults() {
+        List<Doctor> doctors = new ArrayList<>();
         try {
             ReadStreamOptions options = ReadStreamOptions.get().forwards().fromStart();
             ReadResult readResult = eventStoreDBClient.readStream(streamName, options).get();
             for (ResolvedEvent resolvedEvent : readResult.getEvents()) {
-                LabResult labResult = resolvedEvent.getOriginalEvent().getEventDataAs(LabResult.class);
-                labResults.add(labResult);
+                Doctor doctor = resolvedEvent.getOriginalEvent().getEventDataAs(Doctor.class);
+                doctors.add(doctor);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return labResults;
+        return doctors;
     }
 
 

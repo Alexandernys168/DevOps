@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86826be4-3e55-410e-9a1a-03def35347c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/model/LabResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/model/AccessRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/model/AccessResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/model/AccessRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/model/AccessResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/service/AccessControlService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabResultService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/controller/LabResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/controller/LabResultController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/model/LabResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/model/LabResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/model/LabResultEvent.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/repository/EventStoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/repository/EventStoreRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/service/EventStoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/service/EventStoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/service/LabResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/service/LabResultService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/service/NotificationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LabResultService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/model/PatientRegisteredEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/model/PatientRegisteredEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientManagement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/model/LabResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/repository/EventStoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/repository/EventStoreRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/service/EventStoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/service/EventStoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/service/PatientRegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/service/PatientRegistrationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/resources/application.properties" afterDir="false" />
@@ -26,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -59,6 +69,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/KTH_3/SoftwareProjekt/DevOps/LabResultService",
     "node.js.detected.package.eslint": "true",
@@ -70,6 +81,13 @@
     "spring.configuration.checksum": "85613be2d5e72d9467e3ff9666c00339"
   }
 }]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
   <component name="RunManager" selected="Spring Boot.PatientManagementApplication">
     <configuration name="LabResultServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="LabResultService" />
@@ -100,7 +118,12 @@
       <workItem from="1707758967597" duration="18000" />
       <workItem from="1707760923199" duration="15000" />
       <workItem from="1707760957833" duration="43000" />
-      <workItem from="1707762930361" duration="1199000" />
+      <workItem from="1707762930361" duration="1461000" />
+      <workItem from="1707764428892" duration="10000" />
+      <workItem from="1707764478926" duration="29000" />
+      <workItem from="1707764524310" duration="71000" />
+      <workItem from="1707764607362" duration="12898000" />
+      <workItem from="1707815716547" duration="3897000" />
     </task>
     <servers />
   </component>

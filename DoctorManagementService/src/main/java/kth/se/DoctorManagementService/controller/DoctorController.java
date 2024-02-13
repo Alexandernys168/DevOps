@@ -1,9 +1,10 @@
-package kth.se.LabResultService.controller;
+package kth.se.DoctorManagementService.controller;
 
-import kth.se.LabResultService.model.LabResult;
-import kth.se.LabResultService.repository.EventStoreRepository;
-import kth.se.LabResultService.service.LabResultService;
-import kth.se.LabResultService.service.NotificationService;
+import kth.se.DoctorManagementService.model.Doctor;
+
+import kth.se.DoctorManagementService.repository.EventStoreRepository;
+import kth.se.DoctorManagementService.service.DoctorService;
+import kth.se.DoctorManagementService.service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -14,31 +15,31 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/labresult")
+@RequestMapping("/doctor")
 
-public class LabResultController {
+public class DoctorController {
 
     @Value("${eventstoredb.stream.name}")
     private String streamName;
     private final EventStoreRepository eventStoreRepository;
 
-    private final LabResultService labResultService;
+    private final DoctorService labResultService;
 
     private final NotificationService notificationService;
 
     @Autowired
-    public LabResultController(LabResultService labResultService, EventStoreRepository eventStoreRepository , NotificationService notificationService){
+    public DoctorController(DoctorService labResultService, EventStoreRepository eventStoreRepository , NotificationService notificationService){
         this.labResultService=labResultService;
         this.eventStoreRepository=eventStoreRepository;
         this.notificationService=notificationService;
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> saveLabResult(@RequestBody LabResult labResult) {
+    public ResponseEntity<?> saveLabResult(@RequestBody Doctor doctor) {
         try {
 
-            labResultService.registerLabResult(labResult);
-            notificationService.sendNotification( labResult.patientId(), "Lab result is available.");
+            labResultService.registerLabResult(doctor);
+            notificationService.sendNotification( doctor.id(), "Lab result is available.");
 
             return ResponseEntity.ok("Lab result saved successfully");
         } catch (Exception e) {
@@ -57,17 +58,6 @@ public class LabResultController {
         }
     }
 
-
-
-    @GetMapping("/{patientId}")
-    public ResponseEntity<?> getLabResultsForPatient( @PathVariable String patientId) {
-        try {
-            List<LabResult> labResults = labResultService.getLabResultsByPatientId(patientId);
-            return ResponseEntity.ok(labResults);
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to fetch lab results: " + e.getMessage());
-        }
-    }
 
 
 
