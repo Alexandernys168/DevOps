@@ -38,7 +38,8 @@ services:
       - "1113:1113" # TCP Port
     networks:
       - esdb-network
-
+    
+  
 networks:
   esdb-network:
     driver: bridge

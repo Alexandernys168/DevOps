@@ -1,10 +1,12 @@
 package kth.se.DoctorManagementService.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import kth.se.DoctorManagementService.model.AccessRequest;
 import kth.se.DoctorManagementService.model.Doctor;
 
 import kth.se.DoctorManagementService.repository.EventStoreRepository;
 import kth.se.DoctorManagementService.service.DoctorService;
-import kth.se.DoctorManagementService.service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -16,47 +18,55 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/doctor")
+@CrossOrigin
 
 public class DoctorController {
 
+    @Autowired
+    private  DoctorService doctorService;
     @Value("${eventstoredb.stream.name}")
     private String streamName;
-    private final EventStoreRepository eventStoreRepository;
 
-    private final DoctorService labResultService;
-
-    private final NotificationService notificationService;
-
+    ObjectMapper objMap =new ObjectMapper();
     @Autowired
-    public DoctorController(DoctorService labResultService, EventStoreRepository eventStoreRepository , NotificationService notificationService){
-        this.labResultService=labResultService;
-        this.eventStoreRepository=eventStoreRepository;
-        this.notificationService=notificationService;
-    }
+    Gson gson;
 
     @PostMapping("/register")
     public ResponseEntity<?> saveLabResult(@RequestBody Doctor doctor) {
         try {
 
-            labResultService.registerLabResult(doctor);
-            notificationService.sendNotification( doctor.id(), "Lab result is available.");
-
-            return ResponseEntity.ok("Lab result saved successfully");
+            doctorService.registerDoctor(doctor);
+            return ResponseEntity.ok("Doctor saved successfully");
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to save lab result: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to save doctor: " + e.getMessage());
         }
     }
 
 
-    @GetMapping("/allevents")
-    public ResponseEntity<List<String>> getAllEvents() {
+    @GetMapping("/allDoctors")
+    public ResponseEntity<List<String>> getAllDoctors() {
         try {
-            List<String> allEvents = labResultService.getAllEventsInStream(streamName);
+            List<String> allEvents = doctorService.getAllEventsInStream(streamName);
             return ResponseEntity.ok(allEvents);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
+
+
+    @PostMapping("/requestAccess")
+    public ResponseEntity<?> requestAccessToPatient(@RequestBody AccessRequest accessRequest) {
+        try {
+
+            doctorService.requestAccess(gson.toJson(accessRequest));
+            return ResponseEntity.ok("Access request sent successfully");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to send access request: " + e.getMessage());
+        }
+    }
+
+
+
 
 
 

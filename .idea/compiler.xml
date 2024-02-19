@@ -7,15 +7,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="AccessRequestService" />
+        <module name="LabResultService" />
         <module name="PatientManagement" />
+        <module name="DoctorManagementService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="AccessRequestService" target="17" />
+      <module name="DoctorManagementService" target="17" />
+      <module name="LabResultService" target="17" />
       <module name="PatientManagement" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AccessRequestService" options="-parameters" />
+      <module name="DoctorManagementService" options="-parameters --add-modules java.logging" />
+      <module name="LabResultService" options="-parameters" />
       <module name="PatientManagement" options="-parameters" />
     </option>
   </component>

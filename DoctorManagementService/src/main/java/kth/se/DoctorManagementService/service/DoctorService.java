@@ -1,12 +1,18 @@
 package kth.se.DoctorManagementService.service;
 
-import kth.se.DoctorManagementService.model.AccessRequest;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import kth.se.DoctorManagementService.model.AccessResponse;
 import kth.se.DoctorManagementService.model.Doctor;
 import kth.se.DoctorManagementService.repository.EventStoreRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,46 +20,77 @@ import java.util.List;
 @Service
 public class DoctorService {
 
-    private final KafkaTemplate<String, Object> kafkaTemplate;
-    private final String labResultTopic;
-    private final EventStoreRepository eventStoreRepository;
-   // private final NotificationService notificationService;
+    @Autowired
+    private  KafkaTemplate<String, Object> kafkaTemplate;
+    // private final KafkaTemplate<String, Boolean> kafkaTemplateAccess;
 
     @Autowired
-    private KafkaTemplate<String, AccessResponse> kafkaTemplateAccess;
+    private  EventStoreRepository eventStoreRepository;
+    // private final NotificationService notificationService;
+    @Autowired
+    private ObjectMapper objectMapper;
+    @Value("${access.request.topic}")
+    private  String accessRequestTopic ;
+    @Value("${access.response.topic}")
+    private String accessResponseTopic;
+    @Value("${doctor.topic}")
+    private String doctorTopic;
 
     @Autowired
-    public DoctorService(KafkaTemplate<String, Object> kafkaTemplate,
-                         EventStoreRepository eventStoreRepository,
-                         @Value("${LabResult.topic}") String labResultTopic) {
-        this.kafkaTemplate = kafkaTemplate;
-        this.eventStoreRepository = eventStoreRepository;
-        this.labResultTopic = labResultTopic;
+    SimpMessagingTemplate messagingTemplate ;
+
+    private static final Logger logger = LoggerFactory.getLogger(DoctorService.class);
+
+    @Autowired
+    ObjectMapper objMap =new ObjectMapper();
+
+
+    @Autowired
+    Gson gson;
+
+    public void requestAccess(String accessRequest) {
+        logger.info("Sending access request: {}", accessRequest);
+        kafkaTemplate.send(accessRequestTopic, gson.toJson(accessRequest));
+
     }
 
-    private final String accessResponseTopic = "access-response-topic";
+    @KafkaListener(topics ="${access.response.topic}", groupId = "accessResponse-group")
+    public void processAccessResponse(String accessResponse) {
 
-    /*
-    public void processAccessRequest(AccessRequest accessRequest) {
-        AccessResponse accessResponse = new AccessResponse(accessRequest.getId(), accessRequest.getDoctorId(), accessGranted);
-        kafkaTemplateAccess.send(accessResponseTopic, accessResponse);
+        try {
+            AccessResponse request = objectMapper.readValue(accessResponse, AccessResponse.class);
+            String doctorId = request.getDoctorId();
+            String requestId = request.getRequestId();
+            Boolean accessGranted= request.isAccessGranted();
+
+            logger.info("Received access response: {}", request);
+
+            if(accessGranted){
+
+                messagingTemplate.convertAndSend("/topic/access", "Access granted!");
+            }
+
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+
     }
-    */
-    public void registerLabResult(Doctor labresult) {
-        //LocalDateTime now = LocalDateTime.now();
-       Doctor event = new Doctor(
-                labresult.id(),
-                labresult.name(),
-                labresult.lastName()
+
+
+    public void registerDoctor(Doctor doctor) {
+        Doctor event = new Doctor(
+                doctor.id(),
+                doctor.name(),
+                doctor.lastName()
         );
-        kafkaTemplate.send(labResultTopic, event);
-
+        kafkaTemplate.send(doctorTopic, event);
 
     }
 
     public List<String> getAllEventsInStream(String streamName) {
         return eventStoreRepository.getAllEventsInStream(streamName);
     }
+
 
 
 

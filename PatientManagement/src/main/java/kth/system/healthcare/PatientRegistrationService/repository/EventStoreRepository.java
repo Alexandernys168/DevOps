@@ -29,4 +29,7 @@ public class EventStoreRepository {
         eventStoreDBClient.appendToStream(streamName, eventData).get();
     }
 
+
+
+
 }

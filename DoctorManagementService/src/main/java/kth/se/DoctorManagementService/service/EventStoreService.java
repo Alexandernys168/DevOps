@@ -15,7 +15,7 @@ public class EventStoreService {
     @Autowired
     private EventStoreRepository eventStoreRepository;
 
-    @KafkaListener(topics = "${LabResult.topic}", groupId = "${spring.kafka.consumer.group-id}")
+    @KafkaListener(topics = "${doctor.topic}", groupId = "${spring.kafka.consumer.group-id}")
     public void handleLabResultEvent(Doctor event) throws ExecutionException, InterruptedException {
         eventStoreRepository.save(event);
     }

@@ -2,6 +2,8 @@ package kth.system.healthcare.PatientRegistrationService.service;
 
 import kth.system.healthcare.PatientRegistrationService.model.PatientRegisteredEvent;
 import kth.system.healthcare.PatientRegistrationService.repository.EventStoreRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
@@ -19,16 +21,10 @@ public class EventStoreService {
         eventStoreRepository.save(event);
     }
 
-    @KafkaListener(topics = "labResult-topic", groupId = "patient-registration-group")
-    public void handleLabResultEvent(String labResult) {
-        String message = "Nytt labbresultat mottaget: " + labResult;
-        notifyUser(message);
 
-    }
 
-    private void notifyUser(String message) {
-        // Implementera logik för att skicka en notifiering till användaren, t.ex. via e-post, SMS, push-meddelande etc.
-        System.out.println("Notifierar användaren: " + message);
-    }
+
+
+
 
 }

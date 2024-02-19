@@ -1,4 +1,4 @@
-package kth.se.LabResultService.config;
+package kth.se.DoctorManagementService.config;
 import com.eventstore.dbclient.EventStoreDBClient;
 import com.eventstore.dbclient.EventStoreDBClientSettings;
 import com.eventstore.dbclient.EventStoreDBConnectionString;

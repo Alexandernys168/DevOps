@@ -15,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/labresult")
+@CrossOrigin
 
 public class LabResultController {
 
@@ -56,7 +57,6 @@ public class LabResultController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
-
 
 
     @GetMapping("/{patientId}")

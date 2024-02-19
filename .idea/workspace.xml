@@ -4,27 +4,94 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86826be4-3e55-410e-9a1a-03def35347c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/model/AccessRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/model/AccessResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/model/AccessRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/model/AccessResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/service/AccessControlService.java" afterDir="false" />
+    <list default="true" id="de7d3e6a-99d5-4304-8356-8e9ba475dc4a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/DevOps.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_csv_2_15_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_15_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_scala_2_13_2_15_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_ben_manes_caffeine_caffeine_3_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_21_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_paranamer_paranamer_2_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_scala_logging_scala_logging_2_13_3_9_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_yammer_metrics_metrics_core_2_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_dropwizard_metrics_metrics_core_4_2_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_105_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_105_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_105_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_105_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_105_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_105_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_epoll_4_1_105_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_4_1_105_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_105_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_5_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_argparse4j_argparse4j_0_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_2_13_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_2_13_test_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_clients_test_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_group_coordinator_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_metadata_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_raft_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_server_common_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_server_common_test_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_storage_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_storage_api_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_streams_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_streams_test_utils_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_tools_api_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_yetus_audience_annotations_0_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_8_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_jute_3_8_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bitbucket_b_c_jose4j_0_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_37_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_launcher_1_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_pcollections_pcollections_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_rocksdb_rocksdbjni_7_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_modules_scala_collection_compat_2_13_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_modules_scala_java8_compat_2_13_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_13_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_reflect_2_13_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_websocket_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_kafka_spring_kafka_test_3_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_6_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_6_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_sockjs_client_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_stomp_websocket_2_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AccessRequestService/src/main/java/kth/se/AccessRequestService/model/AccessRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AccessRequestService/src/main/java/kth/se/AccessRequestService/model/AccessResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AccessRequestService/src/main/java/kth/se/AccessRequestService/service/AccessRequestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/config/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/config/WebSocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabResultService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorManagementService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorManagementService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/config/EventStoreDBConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/config/EventStoreDBConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/controller/DoctorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/model/AccessRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/model/AccessRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/model/AccessResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/model/AccessResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/service/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/service/DoctorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/service/EventStoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/service/EventStoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorManagementService/src/main/java/kth/se/DoctorManagementService/service/NotificationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorManagementService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorManagementService/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/controller/LabResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/controller/LabResultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/model/LabResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/model/LabResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/repository/EventStoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/repository/EventStoreRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/service/LabResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/service/LabResultService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/java/kth/se/LabResultService/service/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabResultService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/LabResultService/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PatientManagement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/controller/PatientRegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/controller/PatientRegistrationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/model/LabResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/model/PatientRegisteredEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/model/PatientRegisteredEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/repository/EventStoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/repository/EventStoreRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/service/EventStoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/service/EventStoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/service/PatientRegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/java/kth/system/healthcare/PatientRegistrationService/service/PatientRegistrationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PatientManagement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/PatientManagement/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +101,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -55,8 +121,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2cGiR374zmgLD2MwlssflvA6Bd7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2cNPE19LsTJU3QV0OmPGAtCC5u7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -71,24 +136,43 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/KTH_3/SoftwareProjekt/DevOps/LabResultService",
+    "last_opened_file_path": "C:/KTH_2/HI1029",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "configurable.group.appearance",
-    "spring.configuration.checksum": "85613be2d5e72d9467e3ff9666c00339"
+    "spring.configuration.checksum": "49f6a3fd600775c527688f18e44339bf"
   }
 }]]></component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="kth.se.AccessRequestService.model" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="kth.system.healthcare.PatientRegistrationService.config" />
+      <recent name="kth.se.DoctorManagementService.config" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.PatientManagementApplication">
+  <component name="RunManager" selected="Spring Boot.AccessRequestServiceApplication">
+    <configuration name="AccessRequestServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="AccessRequestService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="kth.se.AccessRequestService.AccessRequestServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoctorManagementServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="DoctorManagementService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="kth.se.DoctorManagementService.DoctorManagementServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LabResultServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="LabResultService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="kth.se.LabResultService.LabResultServiceApplication" />
@@ -107,23 +191,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="86826be4-3e55-410e-9a1a-03def35347c4" name="Changes" comment="" />
-      <created>1707744308890</created>
+      <changelist id="de7d3e6a-99d5-4304-8356-8e9ba475dc4a" name="Changes" comment="" />
+      <created>1707948947925</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1707744308890</updated>
-      <workItem from="1707744310981" duration="5553000" />
-      <workItem from="1707757185071" duration="41000" />
-      <workItem from="1707757325335" duration="19000" />
-      <workItem from="1707758967597" duration="18000" />
-      <workItem from="1707760923199" duration="15000" />
-      <workItem from="1707760957833" duration="43000" />
-      <workItem from="1707762930361" duration="1461000" />
-      <workItem from="1707764428892" duration="10000" />
-      <workItem from="1707764478926" duration="29000" />
-      <workItem from="1707764524310" duration="71000" />
-      <workItem from="1707764607362" duration="12898000" />
-      <workItem from="1707815716547" duration="3897000" />
+      <updated>1707948947925</updated>
+      <workItem from="1707948949719" duration="31040000" />
+      <workItem from="1708339059677" duration="15537000" />
     </task>
     <servers />
   </component>
@@ -140,5 +214,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassNotFoundException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
