@@ -63,12 +63,13 @@ public class DoctorService {
             String requestId = request.getRequestId();
             Boolean accessGranted= request.isAccessGranted();
 
-            logger.info("Received access response: {}", request);
+            logger.info("Received access response: {}", request );
 
             if(accessGranted){
 
                 messagingTemplate.convertAndSend("/topic/access", "Access granted!");
             }
+
 
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);

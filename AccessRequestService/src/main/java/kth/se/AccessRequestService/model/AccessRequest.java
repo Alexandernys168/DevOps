@@ -23,7 +23,7 @@ public class AccessRequest {
     private String requestId;
 
 
-    /*
+
     public AccessRequest(String json) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
@@ -36,6 +36,6 @@ public class AccessRequest {
         }
     }
 
-     */
+
 
 }

@@ -20,7 +20,7 @@ public class PatientRegistrationService {
     private final KafkaTemplate<String, Object> kafkaTemplate;
     private final String patientRegistrationTopic;
 
-   // @Autowired
+    @Autowired
     private SimpMessagingTemplate messagingTemplate;
     @Autowired
     public PatientRegistrationService(KafkaTemplate<String, Object> kafkaTemplate,
@@ -66,7 +66,7 @@ public class PatientRegistrationService {
     public void receiveNotification( String patienId ,String message) {
 
         logger.info( patienId, message);
-      //  messagingTemplate.convertAndSend("/topic/notification", message);
+        messagingTemplate.convertAndSend("/topic/notification", message);
     }
 
 
