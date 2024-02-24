@@ -57,4 +57,19 @@ public class LabResultService {
     }
 
 
+    public LabResult getLabResultsBylabresultId(String id) {
+        List<LabResult> allLabResults = eventStoreRepository.getAllLabResults();
+
+    return allLabResults.stream()
+                .filter(result -> result.id().equals(id))
+                .findFirst()
+                .orElse(null); // Returnerar null om ingen matchande LabResult hittades
+
+
+    }
+
+
+
+
+
 }

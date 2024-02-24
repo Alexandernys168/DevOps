@@ -69,6 +69,16 @@ public class LabResultController {
         }
     }
 
+    @GetMapping("labresultId/{id}")
+    public ResponseEntity<?> getLabResult( @PathVariable String id) {
+        try {
+            LabResult labResults = labResultService.getLabResultsBylabresultId(id);
+            return ResponseEntity.ok(labResults);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to fetch lab results: " + e.getMessage());
+        }
+    }
+
 
 
 
