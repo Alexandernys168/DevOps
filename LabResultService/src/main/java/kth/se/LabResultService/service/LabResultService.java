@@ -20,7 +20,8 @@ public class LabResultService {
 
 
     @Autowired
-    public LabResultService(KafkaTemplate<String, Object> kafkaTemplate, EventStoreRepository eventStoreRepository ,@Value("${LabResult.topic}") String LabResultTopic) {
+    public LabResultService(KafkaTemplate<String, Object> kafkaTemplate,
+                            EventStoreRepository eventStoreRepository ,@Value("${LabResult.topic}") String LabResultTopic) {
         this.kafkaTemplate = kafkaTemplate;
         this.eventStoreRepository=eventStoreRepository;
         this.LabResultTopic=LabResultTopic;
