@@ -55,6 +55,25 @@ public class LabResultController {
         }
     }
 
+    @GetMapping("/byPatient/{patientId}")
+    public ResponseEntity<?> getLabResultsForPatient( @PathVariable String patientId) {
+        try {
+            List<LabResult> labResults = labResultService.getLabResultsByPatientId(patientId);
+            return ResponseEntity.ok(labResults);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to fetch lab results: " + e.getMessage());
+        }
+    }
+
+    @GetMapping("/byLabId/{id}")
+    public ResponseEntity<?> getLabResultsById( @PathVariable String id) {
+        try {
+            List<LabResult> labResults = labResultService.getLabResultsById(id);
+            return ResponseEntity.ok(labResults);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to fetch lab results: " + e.getMessage());
+        }
+    }
 
 
 }

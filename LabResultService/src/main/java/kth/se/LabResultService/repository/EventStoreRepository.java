@@ -51,7 +51,20 @@ public class EventStoreRepository {
         return events;
     }
 
-
+    public List<LabResult> getAllLabResults() {
+        List<LabResult> labResults = new ArrayList<>();
+        try {
+            ReadStreamOptions options = ReadStreamOptions.get().forwards().fromStart();
+            ReadResult readResult = eventStoreDBClient.readStream(streamName, options).get();
+            for (ResolvedEvent resolvedEvent : readResult.getEvents()) {
+                LabResult labResult = resolvedEvent.getOriginalEvent().getEventDataAs(LabResult.class);
+                labResults.add(labResult);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return labResults;
+    }
 
 
 }

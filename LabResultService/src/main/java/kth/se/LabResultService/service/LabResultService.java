@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -44,6 +45,20 @@ public class LabResultService {
         return eventStoreRepository.getAllEventsInStream(streamName);
     }
 
+    public List<LabResult> getLabResultsByPatientId(String patientId) {
+        List<LabResult> allLabResults = eventStoreRepository.getAllLabResults();
 
+        return allLabResults.stream()
+                .filter(result -> result.patientId().equals(patientId))
+                .collect(Collectors.toList());
+    }
+
+    public List<LabResult> getLabResultsById(String id) {
+        List<LabResult> allLabResults = eventStoreRepository.getAllLabResults();
+
+        return allLabResults.stream()
+                .filter(result -> result.id().equals(id))
+                .collect(Collectors.toList());
+    }
 
 }
