@@ -8,6 +8,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 
@@ -28,12 +29,12 @@ public class LabResultService {
     }
 
     public void registerLabResult(LabResult labresult){
-        LocalDateTime now = LocalDateTime.now();
+        Long now = new Date().getTime();
         LabResult event= new LabResult(
                 labresult.id(),
                 labresult.patientId(),
-                labresult.result()
-                //now
+                labresult.result(),
+                now
         );
         kafkaTemplate.send(LabResultTopic,event);
     }
